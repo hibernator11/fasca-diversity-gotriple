@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This code include the following folders:
+This code requires the following folders:
 
 - input: json files
 - plots: outputs to illustrate the diversity

@@ -35,10 +35,12 @@ def plot_subject_diversity(host, language, df, column_name, years, r_scale=1):
     D = list()  # diversity
     for year in X:
         print(year)
-        values = df[df.year <= year][column_name]
+        values = df[df.year <= year][column_name] 
         if len(values) != 0:
             R.append(richness(values) / r_scale)
             D.append(shannon_diversty_index(values))
+        else: 
+            X.remove(year) 
     if r_scale == 1:
         plt.plot(X, R, 's', label='richness')
     else: 
